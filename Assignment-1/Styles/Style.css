@@ -1,0 +1,25 @@
+table{
+  margin:10px auto;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td,th{
+    text-align: center;
+    padding:15px;
+    margin: 15px;
+}
+.bgcolor{
+    background-color: rgb(225, 235, 240);
+}
+.txtbold{
+    font-weight: bold;
+}
+h1{
+      text-align: center;
+      color : brown
+}
+
+          
+     
