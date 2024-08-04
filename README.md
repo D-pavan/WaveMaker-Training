@@ -22,3 +22,11 @@ calculator
 ![output](https://github.com/user-attachments/assets/a39d6ad3-8a83-4990-8c3b-d1b18de902c8)
 
 
+Assignment-4
+
+Profile Building
+
+![profile_output](https://github.com/user-attachments/assets/238f05f3-9fd8-4a99-9e74-0052f0a2af13)
+
+
+
