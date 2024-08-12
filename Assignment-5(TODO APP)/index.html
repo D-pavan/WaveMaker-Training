@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+</head>
+<body id="body_bg">
+      <div class="col-md-8 col-sm-8 m-auto  border rounded " id="app-container">
+                <div id="overlay">
+                </div>
+               <div class="dialog" id="dialog">
+                    <header>Input Form</header>
+                    <form >
+                    <label for="d_title">Title:</label><br>
+                    <input type="text" id="d_title" name="d_title" placeholder="Enter title here"><br><br>
+             
+                    <label for="d_description">Description:</label><br>
+                    <textarea id="d_description" name="d_description" placeholder="Enter description here"></textarea><br><br>
+
+                    <label for="d_date">Duration</label><br>
+                    <input type="date" id="d_date" name="d_date" placeholder="Enter date"><br><br>
+            
+                    <label for="d_duration">Duration</label><br>
+                    <input type="time" id="d_duration" name="d_duration" placeholder="Enter duration"><br><br>
+             
+                    <label for="d_priority">Priority:</label><br>
+                    <select id="d_priority" name="d_priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                     
+                    <div>
+                        <button onclick="submitForm()">Submit</button>
+                        <button onclick="closeDialog()">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+            
+               <div class="row">
+                    <div class="row d-flex">
+                            <div class="col-md-4">
+                                 <button class="btn btn-dark mx-4 mt-2" onclick="changeTheme()">🌙</button>
+                            </div>
+                            <div class="col-md-8 d-flex text-center text-white">
+                                <h1 class="mx-4" id="heading1">TODO APP</h1></div>
+                                
+                            </div>   
+                    </div>
+
+                    <div class="row my-2">
+                        <div class="col-md-6 text-white"><input type="text" id="search" name="search" placeholder="search" class="mx-4 mb-1  form-control w-75" oninput="search()"></div>
+                         <div class="col-md-3 text-white d-flex justify-content-start"><button class="btn btn-info mx-4 mx-sm-4  btn-block" onclick="search()">search</button></div>
+                         <div class="col-md-1 text-white d-flex justify-content-end"><button class="btn btn-info mx-3 btn-block" onclick="sortCards()">sort</button></div>
+                         <div class="col-md-2 text-white d-flex justify-content-start">
+                            <select for="sort" id="sortoption" class="form-control w-100 mx-3">
+                                <option value="time">Time</option>
+                                <option value="priority">priority</option>
+                             </select>
+                         </div>
+                    </div>
+               <div class="row">
+                    <div class="col-md-6 text-white"><h2 class="mx-4" id="t_title">Tasks</h2></div>
+                     <div class="col-md-6 text-white d-flex justify-content-end"><button class="btn btn-info mx-3 btn-block" onclick="add()">Add</button></div>
+                     
+               </div>
+               <div class="row">
+                   <div class="col-md-6">
+                        <form class="mx-4" id="task-form">
+                            <label for="title" class="text-white">Title</label><br>
+                            <input type="text" id="title" name="title" class="form-control"><br><br>
+                            <label for="description" class="text-white">Description</label><br>
+                            <textarea name="description" id="description" class="form-control"></textarea><br><br>
+                            <label for="date" class="text-white">Duration</label><br>
+                            <input type="date" id="date"  name="date" class="form-control"><br><br>
+                            <label for="duration" class="text-white">Duration</label><br>
+                            <input type="time" id="duration" min="1" name="duration" class="form-control"><br><br>
+                            <label for="priority" class="text-white">priority</label> 
+                            <select name="priority" id='priority' class="form-control"> <br> 
+                                <option value="Low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select><br>
+                            <button class="btn btn-info" onclick="done(event)">Done</button>   <br><br>
+                        </form>
+                    </div>
+                </div>
+                <div class="row m-5" id="task-container">
+                    <!-- <div class='col-md-12 mb-1 bg-light border rounded border-dark'>
+                            <div class='row'>
+                                <div class='col-md-6'>
+                                    <h1>Title</h1>
+                                <div>
+                                <div class='col-md-6'>
+                                    <button>Edit</button>
+                                    <button>View</button>
+                                    <button>Delete</button>
+                                    <button>Subtask</button>
+                                <div>
+
+                            </div>
+
+                         </div> -->
+                    
+
+                </div>
+                <div class="row m-5">
+                    <div class="col-md-12">
+                         <div class="row d-flex">
+                             <div class="col-md-8 d-md-flex flex-md-row d-sm-flex flex-sm-column">     
+                                <span class="text-white" id="import_s">import</span>        
+                                <input type="file" class="btn bg-info w-sm-100 w-50 mx-1" id='fileInput' value="import" onchange="importData(event)">
+                                <button class="btn btn-info mx-1 mt-2"  onclick="exportData()">Export</button>
+                             </div>
+                             
+                         </div>
+                    </div>
+                    
+                    
+                 </div>
+      </div>
+     <script src="./script.js"></script>
+    
+</body>
+</html>
