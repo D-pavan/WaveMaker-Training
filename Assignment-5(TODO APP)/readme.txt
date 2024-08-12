@@ -1,3 +1,12 @@
 TODO APP URL:
 https://amazing-cocada-c73905.netlify.app/
 
+Note : After uploading file to import data reload the browser to see changes
+
+PENDING TASKS: 
+1) Validations
+2) DRAG AND  DROP ARE NOT DONE PROPERLY  LIKE WHEN TASK IS DRAGGED IT WILL APPENDED TO END OF THE BOX NOT TO LOCATION WHERE YOU DROPPED AND
+   CANNOT  INTERCHANGE SUBTASKS. SUBTASK CAN BE ABLE TO MAKE MAIN TASK.
+ 
+
+
